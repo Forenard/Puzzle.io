@@ -1,5 +1,10 @@
 # Puzzle.io
 
+## TODO
+
+- 2Dか2Dか(全体の大まかなデザインの決定も兼ねてる)
+- Roidがブランチ切ってmd編集してプルリク送ってマージできるようになる
+
 ## 仕様
 - [FigJam](https://www.figma.com/file/5KgX2M3JBiThUr5wA0UUEy/7DayGame1?node-id=4%3A231)にまとめている
 
