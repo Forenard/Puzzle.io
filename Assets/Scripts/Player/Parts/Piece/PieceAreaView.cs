@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PieceAreaView : MonoBehaviour
 {
+    [Header("Reference")]
     [SerializeField]
     private GameObject _projGameObj=null;
     [SerializeField]
@@ -16,7 +17,11 @@ public class PieceAreaView : MonoBehaviour
         _gameObjDict[PieceAreaType.dent]=_dentGameObj;
         _gameObjDict[PieceAreaType.flat]=_flatGameObj;
     }
-    public void SetActiveType(PieceAreaType areaType){
+    /// <summary>
+    /// AreaTypeを設定する
+    /// </summary>
+    /// <param name="areaType"></param>
+    public void SetAreaType(PieceAreaType areaType){
         foreach (var typeObjPair in _gameObjDict)
         {
             PieceAreaType type=typeObjPair.Key;
