@@ -63,7 +63,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ca6908bf07193e4285a1d52df73114a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pieceAreaViews:
+  _Areas:
   - {fileID: 4583035748958632269}
   - {fileID: 3943449928540999915}
   - {fileID: 4687564450081228311}
@@ -89,7 +89,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6322378371854485984, guid: 39b79c885708a574fb147238d3df2a81, type: 3}
       propertyPath: m_Name
-      value: Area2
+      value: Area_2
       objectReference: {fileID: 0}
     - target: {fileID: 6322378371854485985, guid: 39b79c885708a574fb147238d3df2a81, type: 3}
       propertyPath: m_RootOrder
@@ -162,7 +162,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6322378371854485984, guid: 39b79c885708a574fb147238d3df2a81, type: 3}
       propertyPath: m_Name
-      value: Area1
+      value: Area_1
       objectReference: {fileID: 0}
     - target: {fileID: 6322378371854485985, guid: 39b79c885708a574fb147238d3df2a81, type: 3}
       propertyPath: m_RootOrder
@@ -233,9 +233,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4583035748084666139}
     m_Modifications:
+    - target: {fileID: 2755481229351766656, guid: 39b79c885708a574fb147238d3df2a81, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6322378371854485984, guid: 39b79c885708a574fb147238d3df2a81, type: 3}
       propertyPath: m_Name
-      value: Area0
+      value: Area_0
       objectReference: {fileID: 0}
     - target: {fileID: 6322378371854485985, guid: 39b79c885708a574fb147238d3df2a81, type: 3}
       propertyPath: m_RootOrder
@@ -281,6 +285,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6322378371997644388, guid: 39b79c885708a574fb147238d3df2a81, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39b79c885708a574fb147238d3df2a81, type: 3}
 --- !u!4 &4583035748958632270 stripped
@@ -308,7 +316,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6322378371854485984, guid: 39b79c885708a574fb147238d3df2a81, type: 3}
       propertyPath: m_Name
-      value: Area3
+      value: Area_3
       objectReference: {fileID: 0}
     - target: {fileID: 6322378371854485985, guid: 39b79c885708a574fb147238d3df2a81, type: 3}
       propertyPath: m_RootOrder

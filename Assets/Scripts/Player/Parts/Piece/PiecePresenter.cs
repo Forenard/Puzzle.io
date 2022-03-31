@@ -11,7 +11,7 @@ public class PiecePresenter : MonoBehaviour
     private PieceModel _pieceModel=null;
     [SerializeField]
     private PieceView _pieceView=null;
-    private void Start() {
+    private void Awake() {
         InitSubscribe();
     }
     //購読の初期化
