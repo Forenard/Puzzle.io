@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using ExitGames.Client.Photon.StructWrapping;
 using UnityEngine;
 
-public class PartsModel : MonoBehaviour
+public class Parts : MonoBehaviour
 {
     [Header("Parameter")]
     [SerializeField]
@@ -20,6 +20,7 @@ public class PartsModel : MonoBehaviour
     private void Start() {
         InitPiecesAreas();
     }
+    //内側のエリアをflatにし、外側のエリアをfortにする
     private void InitPiecesAreas(){
         //辞書構築
         _pieceModels.ForEach(p=>{
@@ -34,7 +35,10 @@ public class PartsModel : MonoBehaviour
                 int y=piece.Y+dy;
                 if(_pieceDict.ContainsKey((x,y))){
                     //隣接発見!平らにします
-                    piece.ChangePieceAreaTypes(dir,PieceAreaType.flat);
+                    piece.ChangeAreaTypes(dir,AreaType.flat);
+                }else{
+                    //外側なのでfortにする
+                    piece.ChangeAreaTypes(dir,AreaType.fort);
                 }
             }
         });

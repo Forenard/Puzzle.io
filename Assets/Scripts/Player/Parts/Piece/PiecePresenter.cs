@@ -16,6 +16,6 @@ public class PiecePresenter : MonoBehaviour
     }
     //購読の初期化
     private void InitSubscribe(){
-        _pieceModel.pieceAreaTypesRO.Subscribe(value=>{_pieceView.SetAreaTypes((Direction.Type)value.Index,value.NewValue);});
+        _pieceModel.AreaTypesRO.Subscribe(value=>{_pieceView.SetAreaTypes((Direction.Type)value.Index,value.NewValue);});
     }
 }
