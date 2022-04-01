@@ -9,7 +9,7 @@ public class PieceModel : MonoBehaviour
 {
     public int X
     {
-        get { return (int)this.transform.localPosition.x; }
+        get { return Mathf.FloorToInt(this.transform.localPosition.x+0.5f);}
         set {
             Vector2 newpos=new Vector2(value,this.transform.localPosition.y);
             this.transform.localPosition=newpos;
@@ -17,7 +17,7 @@ public class PieceModel : MonoBehaviour
     }
     public int Y
     {
-        get { return (int)this.transform.localPosition.y; }
+        get { return Mathf.FloorToInt(this.transform.localPosition.y+0.5f); }
         set {
             Vector2 newpos=new Vector2(this.transform.localPosition.x,value);
             this.transform.localPosition=newpos;

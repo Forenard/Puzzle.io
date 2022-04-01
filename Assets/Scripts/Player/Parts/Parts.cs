@@ -8,6 +8,11 @@ public class Parts : MonoBehaviour
 
     [SerializeField]
     private PartsType _partsType;
+    public PartsType PartsType
+    {
+        get { return _partsType; }
+        set { _partsType = value; }
+    }
     [Header("Reference")]
     [SerializeField]
     private List<PieceModel> _pieceModels = new List<PieceModel>();
@@ -40,8 +45,8 @@ public class Parts : MonoBehaviour
         {
             Vector2 newpos = Quaternion.Euler(0, 0, 360f - 90f * (int)dir).normalized * new Vector2(pieceModel.X, pieceModel.Y);
             //丸め誤差を避けるため、予めintに制限しておく(最もintに近い方向へ丸める)
-            pieceModel.X = Mathf.FloorToInt(newpos.x+0.5f);
-            pieceModel.Y = Mathf.FloorToInt(newpos.y+0.5f);
+            pieceModel.X = Mathf.FloorToInt(newpos.x + 0.5f);
+            pieceModel.Y = Mathf.FloorToInt(newpos.y + 0.5f);
             pieceModel.Rotate(dir);
         }
     }
@@ -51,7 +56,8 @@ public class Parts : MonoBehaviour
         //辞書構築
         _pieceModels.ForEach(p =>
         {
-            if (!_pieceDict.ContainsKey((p.X, p.Y))){
+            if (!_pieceDict.ContainsKey((p.X, p.Y)))
+            {
                 _pieceDict.Add((p.X, p.Y), p);
             }
         });
