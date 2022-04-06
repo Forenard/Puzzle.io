@@ -10,6 +10,9 @@
 - テクスチャ全部できたらアウトライン入れる
 - ピース-パーツ-プレイヤーを作る(MVPパターンの学習)
 
+## Tag
+- Bullet(弾丸につける)
+
 ## 仕様
 - [FigJam](https://www.figma.com/file/5KgX2M3JBiThUr5wA0UUEy/7DayGame1?node-id=4%3A231)にまとめている
 
