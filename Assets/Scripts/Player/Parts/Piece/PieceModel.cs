@@ -28,6 +28,10 @@ public class PieceModel : MonoBehaviour
     {
         get { return _AreaTypesRP.ToList(); }
     }
+    private Parts _parts=null;
+    private void Awake() {
+        _parts=this.transform.parent.GetComponent<Parts>();
+    }
     public IObservable<CollectionReplaceEvent<AreaType>> AreaTypesRO => _AreaTypesRP.ObserveReplace();
     /// <summary>
     /// 上下左右のエリアについてAreaTypeを変更する
@@ -51,5 +55,15 @@ public class PieceModel : MonoBehaviour
         {
             _AreaTypesRP[i]=areatypes[(i-(int)dir+4)%4];
         }
+    }
+    private void OnCollisionEnter2D(Collision2D other) {
+        if(other.transform.CompareTag(TagStrings.Bullet)){
+            //弾が当たった！
+            AttakedByBullet();
+        }
+    }
+    //弾と衝突した際に呼ばれる
+    private void AttakedByBullet(){
+
     }
 }

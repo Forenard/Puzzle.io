@@ -21,6 +21,7 @@ public class CliantPlayer : MonoBehaviour
         (int offX,int offY)=GetPutPartsPos(parts);
         parts.transform.SetParent(this.transform);
         parts.transform.localPosition=new Vector3(offX,offY,0);
+        parts.transform.localRotation=Quaternion.identity;
         UpdateDicts(parts,offX,offY);
         SetUpPiecesAreas(parts,offX,offY);
     }

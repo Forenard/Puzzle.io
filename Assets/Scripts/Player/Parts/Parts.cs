@@ -7,11 +7,11 @@ public class Parts : MonoBehaviour
     [Header("Parameter")]
 
     [SerializeField]
-    private PartsType _partsType;
-    public PartsType PartsType
+    private BulletType _BulletType;
+    public BulletType BulletType
     {
-        get { return _partsType; }
-        set { _partsType = value; }
+        get { return _BulletType; }
+        set { _BulletType = value; }
     }
     [Header("Reference")]
     [SerializeField]
@@ -31,9 +31,16 @@ public class Parts : MonoBehaviour
     {
         get { return _pieceDict; }
     }
+
+    public int Hp { get => _hp; set => _hp = value; }
+
+    private int _hp=0;
+    
     private void Awake()
     {
         SetUpPiecesAreas();
+        //hpの計算
+        this._hp=CalcHp();
     }
     /// <summary>
     /// パーツを回転させる
@@ -81,5 +88,9 @@ public class Parts : MonoBehaviour
                 }
             }
         });
+    }
+
+    private int CalcHp(){
+        return PieceModels.Count*ParameterDefinition.PieceHp;
     }
 }

@@ -1,4 +1,4 @@
-public enum PartsType{
+public enum BulletType{
     normal=0,
     wide=1,
     bound=2,
