@@ -14,7 +14,7 @@ public class ShotGun : MonoBehaviour {
     public float speed = 1000;
 
     // 弾丸の発射間隔(50で一秒に一回、25で一秒に二回)
-    public int maxCount = 25; 
+    public int maxCount = 150; 
  
     int count = 0;
 
@@ -24,6 +24,7 @@ public class ShotGun : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
+    /*
 	void Update () {
         // z キーが押された時
         if (Input.GetKeyDown(KeyCode.Z)){
@@ -36,12 +37,13 @@ public class ShotGun : MonoBehaviour {
             force = this.gameObject.transform.up * speed;
  
             // Rigidbodyに力を加えて発射
-            bullets.GetComponent<Rigidbody>().AddForce(force);
+            bullets.GetComponent<Rigidbody2D>().AddForce(force);
  
             // 弾丸の位置を調整
             bullets.transform.position = muzzle.position;
         }
     }
+    */
 
     void FixedUpdate () {
         count += 1;
@@ -54,7 +56,7 @@ public class ShotGun : MonoBehaviour {
             force = this.gameObject.transform.up * speed;
  
             // Rigidbodyに力を加えて発射
-            bullets.GetComponent<Rigidbody>().AddForce(force);
+            bullets.GetComponent<Rigidbody2D>().AddForce(force);
  
             // 弾丸の位置を調整
             bullets.transform.position = muzzle.position;
