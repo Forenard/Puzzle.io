@@ -1,4 +1,5 @@
 public static class ParameterDefinition{
+    public const float PlayerSpeed=5f;
     public const int PieceHp=100;
     public const float BulletMaxDistance=10f;
     public static int BulletDamage(BulletType bulletType){
