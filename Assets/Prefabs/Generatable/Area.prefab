@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1418915944329962333
 Transform:
   m_ObjectHideFlags: 0
@@ -96,10 +96,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7306c3e981cd35143a6f5f95f4cd58e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 344031216049798773, guid: c204087d8f2dff04aa1aeae7b241c2a5, type: 3}
-  muzzle: {fileID: 8385620523542480508}
-  speed: 100
-  maxCount: 25
+  _bulletPrefabs:
+  - {fileID: 9192406840869448556, guid: 9f441fabdc3c7a742abdc9d4a9618ffd, type: 3}
+  - {fileID: 5993514372976647384, guid: f7a4112326c8f334f8eac0695cc59f9a, type: 3}
+  - {fileID: 7283677097648537781, guid: eb429a88d9610064db730234f15e9241, type: 3}
+  - {fileID: 7102898396154241088, guid: b8ad8a5dfc9528a459a71550be099457, type: 3}
+  _muzzle: {fileID: 8385620523542480508}
+  _speed: 1
+  _maxCount: 150
 --- !u!1 &5034642493443348186
 GameObject:
   m_ObjectHideFlags: 0
