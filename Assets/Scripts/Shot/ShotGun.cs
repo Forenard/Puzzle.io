@@ -1,67 +1,55 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
- 
+//TODO:BulletType毎に弾の挙動を変える
 public class ShotGun : MonoBehaviour {
- 
+    [Header("Refalence")]
     // bullet prefab
-    public GameObject bullet;
+    [SerializeField,Tooltip("BulletTypeの順番に沿って下さい")]
+    private List<GameObject> _bulletPrefabs=new List<GameObject>(4);
  
     // 弾丸発射点
-    public Transform muzzle;
- 
+    [SerializeField]
+    private Transform _muzzle;
+    
+    [Header("Parameter")]
     // 弾丸の速度
-    public float speed = 1000;
+    [SerializeField]
+    private float _speed = 1f;
 
     // 弾丸の発射間隔(50で一秒に一回、25で一秒に二回)
-    public int maxCount = 150; 
+    [SerializeField]
+    private int _maxCount = 150; 
  
-    int count = 0;
+    private int _count = 0;
+    private BulletType _bulletType;
+    private Parts _parts;
 
 	// Use this for initialization
-	void Start () {
-		count = 0;
+	void Awake () {
+        _parts=this.transform.parent.parent.parent.GetComponent<Parts>();
+		_bulletType=_parts.BulletType;
 	}
-	
-	// Update is called once per frame
-    /*
-	void Update () {
-        // z キーが押された時
-        if (Input.GetKeyDown(KeyCode.Z)){
-            
-            // 弾丸の複製
-            GameObject bullets = Instantiate(bullet) as GameObject;
- 
-            Vector3 force;
- 
-            force = this.gameObject.transform.up * speed;
- 
-            // Rigidbodyに力を加えて発射
-            bullets.GetComponent<Rigidbody2D>().AddForce(force);
- 
-            // 弾丸の位置を調整
-            bullets.transform.position = muzzle.position;
-        }
-    }
-    */
 
     void FixedUpdate () {
-        count += 1;
-        if (count == maxCount) {
+        _count += 1;
+        if (_count == _maxCount) {
+            //TODO BulletTypeがwideの場合、弾生成の仕方を変える
             // 弾丸の複製
-            GameObject bullets = Instantiate(bullet) as GameObject;
+            GameObject bulletPrefab=_bulletPrefabs[(int)_bulletType];
+            GameObject bulletObj = Instantiate(bulletPrefab);
  
-            Vector3 force;
+            Vector3 direction;
  
-            force = this.gameObject.transform.up * speed;
- 
-            // Rigidbodyに力を加えて発射
-            bullets.GetComponent<Rigidbody2D>().AddForce(force);
+            direction = this.gameObject.transform.up;
+
+            var bullet =bulletObj.GetComponent<Bullet>();
+            bullet.SetParams(direction,_speed);
  
             // 弾丸の位置を調整
-            bullets.transform.position = muzzle.position;
+            bulletObj.transform.position = _muzzle.position;
 
-            count = 0;
+            _count = 0;
         }
     }
 }

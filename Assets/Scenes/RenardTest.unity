@@ -257,37 +257,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7740711860497816793, guid: d2b00d89fa0daf340a6542471115244c, type: 3}
-      propertyPath: _initPartsPrefab.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7740711860497816793, guid: d2b00d89fa0daf340a6542471115244c, type: 3}
-      propertyPath: _initPartsPrefabs.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7740711860497816793, guid: d2b00d89fa0daf340a6542471115244c, type: 3}
-      propertyPath: _initPartsPrefab.Array.data[1]
-      value: 
-      objectReference: {fileID: 950988938105605582, guid: dd0b859b2a113154ea4023dcf0fcc016, type: 3}
-    - target: {fileID: 7740711860497816793, guid: d2b00d89fa0daf340a6542471115244c, type: 3}
-      propertyPath: _initPartsPrefabs.Array.data[4]
-      value: 
-      objectReference: {fileID: 3184613349015242845, guid: d4a74584c37d0ac4ba3183311a0d1c04, type: 3}
-    - target: {fileID: 7740711860497816793, guid: d2b00d89fa0daf340a6542471115244c, type: 3}
-      propertyPath: _initPartsPrefabs.Array.data[5]
-      value: 
-      objectReference: {fileID: 3184613349015242845, guid: d4a74584c37d0ac4ba3183311a0d1c04, type: 3}
-    - target: {fileID: 7740711860497816793, guid: d2b00d89fa0daf340a6542471115244c, type: 3}
-      propertyPath: _initPartsPrefabs.Array.data[6]
-      value: 
-      objectReference: {fileID: 3184613349015242845, guid: d4a74584c37d0ac4ba3183311a0d1c04, type: 3}
     - target: {fileID: 7740711860497816798, guid: d2b00d89fa0daf340a6542471115244c, type: 3}
       propertyPath: m_Name
       value: CliantPlayerFactory
-      objectReference: {fileID: 0}
-    - target: {fileID: 7740711860497816798, guid: d2b00d89fa0daf340a6542471115244c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2b00d89fa0daf340a6542471115244c, type: 3}
